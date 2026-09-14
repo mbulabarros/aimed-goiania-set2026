@@ -251,6 +251,14 @@ abbr.gloss:hover::after{opacity:1;visibility:visible;transform:translateX(-50%) 
 .logi-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
 .logi-value{color:var(--gray-100);font-size:.94em}
 .logi-value a{color:var(--teal);text-decoration:underline}
+.logi-value p{margin:0 0 10px;font-weight:400}
+.logi-value ol{padding-left:22px;margin:8px 0 14px}
+.logi-value li{padding-left:3px;margin-bottom:7px}
+.logi-platform{padding:14px 16px;margin:12px 0;background:var(--navy-card);border:1px solid var(--border);border-radius:var(--radius)}
+.logi-platform h3{font-family:'DM Sans',sans-serif;font-size:1em;margin:0 0 7px;color:var(--gold-light)}
+.logi-platform ol:last-child{margin-bottom:0}
+.logi-note{padding:12px 14px;margin:12px 0;background:rgba(201,168,76,.07);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0}
+.logi-sources{font-size:.82em;color:var(--gray-300);line-height:1.6}
 
 table{overflow-x:auto}
 
@@ -375,7 +383,7 @@ table{overflow-x:auto}
       </div>
       <div class="logi-item">
         <div class="logi-label">Datas e horário</div>
-        <div class="logi-value">Sábado 19/set e domingo 20/set: 8h00–12h00 e 13h30–17h30. Cafés: 10h00–10h15 e 15h30–15h45. São 16 horas de programação presencial, incluindo 1 hora de intervalos para café.</div>
+        <div class="logi-value">Sábado 19/set e domingo 20/set: 8h00–12h00 e 13h30–17h30. Em cada dia, os cafés são das 10h00 às 10h15 e das 15h30 às 15h45.</div>
       </div>
       <div class="logi-item">
         <div class="logi-label">Instalar no celular</div>
@@ -383,7 +391,42 @@ table{overflow-x:auto}
       </div>
       <div class="logi-item">
         <div class="logi-label">O que trazer</div>
-        <div class="logi-value">Notebook com Claude, ChatGPT e Gemini já logados (contas gratuitas servem para a maior parte do curso — avisos de exceção ficam no módulo "Do Prompt ao Agente"). Fone de ouvido para o módulo de voz.</div>
+        <div class="logi-value">Traga seu notebook, carregador e acesso ao seu e-mail e celular para confirmar os cadastros. Antes da aula, entre no ChatGPT, no Claude e no Gemini e envie uma mensagem simples em cada um.</div>
+      </div>
+      <div class="logi-item">
+        <div class="logi-label">Criar as três contas gratuitas · faça antes do curso</div>
+        <div class="logi-value">
+          <p>Use seu e-mail pessoal e anote qual método de entrada escolheu (e-mail, Google, Apple ou Microsoft, quando oferecido). Se já tem uma conta, apenas entre nela. Nenhuma assinatura é necessária para estes primeiros passos.</p>
+          <div class="logi-platform"><h3>1 · ChatGPT</h3><ol>
+            <li>Abra <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">chatgpt.com</a> e escolha <strong>Entrar</strong> se já usa a plataforma ou <strong>Criar conta/Sign up</strong>.</li>
+            <li>Escolha uma das opções mostradas na tela (e-mail, Google, Apple ou Microsoft). Complete a verificação solicitada e permaneça no plano gratuito.</li>
+            <li>Já conectado, abra uma nova conversa e escreva “Olá, estou testando minha conta para o curso AIMED”. Confirme que recebeu resposta e que a conversa aparece no histórico.</li>
+          </ol></div>
+          <div class="logi-platform"><h3>2 · Claude</h3><ol>
+            <li>Abra <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">claude.ai</a>. Escolha <strong>Continue with Google</strong> ou informe seu e-mail e escolha <strong>Continue with email</strong>.</li>
+            <li>Se usou e-mail, abra a mensagem de acesso e siga o link ou digite o código no aparelho em que começou. Se for solicitado, confirme seu telefone por SMS. Escolha a opção gratuita.</li>
+            <li>Escreva uma mensagem de teste e confirme que o Claude respondeu. Se o e-mail não chegar, procure na pasta de spam; se o SMS não chegar, revise o número com DDD.</li>
+          </ol></div>
+          <div class="logi-platform"><h3>3 · Gemini</h3><ol>
+            <li>Abra <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com</a> e toque em <strong>Fazer login</strong>. Entre com uma conta Google pessoal. Quem já usa Gmail ou Android geralmente já tem uma.</li>
+            <li>Se não tiver conta Google, use <a href="https://accounts.google.com/signup" target="_blank" rel="noopener noreferrer">Criar conta Google</a>, escolha uso pessoal, siga os campos e conclua a confirmação pedida. Volte ao Gemini e entre.</li>
+            <li>Envie uma mensagem de teste e confirme a resposta. Contas institucionais podem depender de liberação do administrador; nesse caso, prefira uma conta pessoal.</li>
+          </ol></div>
+          <div class="logi-note"><strong>Pronto para a aula?</strong> Você consegue abrir as três plataformas no notebook, entrar novamente sem ajuda e enviar uma mensagem em cada uma. Não inclua dados identificáveis de pacientes nesse teste.</div>
+        </div>
+      </div>
+      <div class="logi-item">
+        <div class="logi-label">Aula de agentes · assinaturas pagas</div>
+        <div class="logi-value">
+          <p>As contas gratuitas bastam para acompanhar a maior parte do curso. Para <strong>executar pessoalmente a comparação de agentes</strong> em “Do Prompt ao Agente”, é conveniente ter plano pago elegível nas plataformas que você pretende testar. Você pode assistir e desenhar seu agente sem comprar as três assinaturas; escolha conforme seu projeto e orçamento.</p>
+          <ol>
+            <li><strong>ChatGPT Work:</strong> no <a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT</a>, entre na sua conta, abra o menu do perfil → <strong>Upgrade Plan/Atualizar plano</strong> e confira um plano elegível (por exemplo, Plus). Após a contratação, verifique se <strong>Work</strong> aparece na sua conta; o acesso varia por plano, ambiente e liberação gradual.</li>
+            <li><strong>Claude Cowork:</strong> no <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude</a>, abra seu perfil → <strong>Settings</strong> → <strong>Billing</strong> → <strong>Upgrade plan</strong>. Confira um plano elegível, como Pro, e verifique se <strong>Cowork</strong> aparece na caixa de mensagem. Para trabalhar com arquivos locais no notebook, instale o aplicativo oficial para computador.</li>
+            <li><strong>Gemini Spark:</strong> no <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini</a>, abra <strong>Configurações e ajuda</strong> → <strong>Ver assinaturas</strong> e confira os planos Google AI. <strong>Antes de pagar, confirme se Spark está disponível para a sua conta e região:</strong> a assinatura Pro por si só não garante o recurso em todos os países; a disponibilidade do Ultra também segue as regras do Google.</li>
+          </ol>
+          <div class="logi-note">Em qualquer plataforma, confira preço, período de cobrança, renovação e disponibilidade do recurso <strong>antes</strong> de confirmar o pagamento. Faça a assinatura, se optar por ela, no site oficial e com antecedência suficiente para testar o acesso. A compra não faz parte da inscrição no AIMED.</div>
+          <div class="logi-sources">Instruções oficiais: <a href="https://help.openai.com/en/articles/20001275/" target="_blank" rel="noopener noreferrer">ChatGPT Work</a> · <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" target="_blank" rel="noopener noreferrer">Claude Cowork</a> · <a href="https://support.google.com/gemini/answer/17094507" target="_blank" rel="noopener noreferrer">Gemini Spark</a>. Recursos e telas podem mudar; verificado em setembro/2026.</div>
+        </div>
       </div>
     </div>
   </div>
