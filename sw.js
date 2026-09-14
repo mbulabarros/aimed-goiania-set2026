@@ -1,4 +1,4 @@
-const CACHE = 'aimed-goiania-2026-v1';
+const CACHE = 'aimed-goiania-2026-v2';
 const LOCAL = [
   './', './index.html', './AIMED_Goiania_19-20_09_2026.html',
   './manifest.json', './og-image.png',
@@ -20,5 +20,5 @@ self.addEventListener('fetch', event => {
       caches.open(CACHE).then(cache => cache.put(event.request, copy));
     }
     return response;
-  }).catch(() => caches.match(event.request).then(cached => cached || caches.match('./index.html'))));
+  }).catch(() => caches.match(event.request).then(cached => cached || (event.request.mode === 'navigate' ? caches.match('./index.html') : Response.error()))));
 });
