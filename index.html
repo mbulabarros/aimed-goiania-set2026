@@ -415,8 +415,8 @@ const PROGRAMA = [
           <div class="mini-map-item"><div class="mini-map-label">Bloco 1 · sáb manhã</div><div class="mini-map-role">Arquiteto</div></div>
           <div class="mini-map-item"><div class="mini-map-label">Bloco 2 · sáb tarde</div><div class="mini-map-role">Clínico</div></div>
           <div class="mini-map-item"><div class="mini-map-label">Bloco 3 · dom manhã</div><div class="mini-map-role">Pesquisador</div></div>
-          <div class="mini-map-item"><div class="mini-map-label">Bloco 4 · dom tarde</div><div class="mini-map-role">Integrador</div></div>
-          <div class="mini-map-item"><div class="mini-map-label">Bloco 5 · encerramento</div><div class="mini-map-role">Crescimento</div></div>
+          <div class="mini-map-item"><div class="mini-map-label">Bloco 4 · dom manhã</div><div class="mini-map-role">Integrador</div></div>
+          <div class="mini-map-item"><div class="mini-map-label">Bloco 5 · dom tarde</div><div class="mini-map-role">Crescimento</div></div>
         </div>
         <div class="callout"><div class="callout-label">Regra da sala</div><p>Todos aqui são alunos — <strong>incluindo eu</strong>. Especialidade e tempo de carreira ficam na porta.</p></div>`
     },
@@ -1140,7 +1140,7 @@ function enhancePromptActions(scope){
     copy.style.marginTop='0';
     actions.appendChild(copy);
 
-    const text=prompt.innerText;
+    const text=prompt.textContent;
     const targets=[
       {name:'ChatGPT',url:'https://chatgpt.com/',query:'?q='},
       {name:'Claude',url:'https://claude.ai/new',query:'?q='},
@@ -1156,10 +1156,10 @@ function enhancePromptActions(scope){
       link.rel='noopener noreferrer';
       link.textContent=needsPaste?'Abrir no '+target.name+' + copiar':'Abrir no '+target.name;
       if(needsPaste){
-        link.title='O prompt será copiado. Cole-o na nova aba com Ctrl+V.';
+        link.title='O prompt será copiado. Cole-o no campo de mensagem da nova aba.';
         link.addEventListener('click',()=>{
           if(navigator.clipboard && navigator.clipboard.writeText){
-            navigator.clipboard.writeText(prompt.innerText).catch(()=>{});
+            navigator.clipboard.writeText(prompt.textContent).catch(()=>{});
           }
         });
       }
