@@ -260,7 +260,11 @@ table{overflow-x:auto}
 }
 @media (max-width:860px){
   .shell{flex-direction:column}
-  .sidebar{width:100%;position:relative;max-height:none;border-right:none;border-bottom:1px solid var(--border)}
+  .mobile-nav-toggle{display:flex;position:sticky;top:0;z-index:40;width:100%;align-items:center;justify-content:space-between;text-align:left;padding:10px 18px;min-height:58px;background:var(--navy-mid);border-bottom:1px solid var(--border-strong);color:var(--gold-light);font-weight:600}
+  .mobile-nav-toggle small{display:block;font-size:.72rem;font-weight:400;color:var(--gray-100);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:78vw}
+  .sidebar{display:none;width:100%;position:relative;max-height:62dvh;overflow-y:auto;border-right:none;border-bottom:1px solid var(--border)}
+  .sidebar.open{display:block}
+  main{scroll-margin-top:60px}
   main{padding:26px 18px 70px}
   .promise-grid,.scenario-flow,.alert-grid,.platform-grid,.tool-grid{grid-template-columns:minmax(0,1fr) !important;max-width:100% !important}
   .mini-map{grid-template-columns:repeat(2,1fr)}
@@ -289,6 +293,7 @@ table{overflow-x:auto}
   .prompt-actions .action-btn{min-height:44px}
   .overlay-header,.overlay-body{padding-left:18px;padding-right:18px}
 }
+@media(min-width:861px){.mobile-nav-toggle{display:none}}
 .trail-break{padding:8px 22px;color:var(--gold-light);font-family:'DM Mono',monospace;font-size:.74rem;background:rgba(201,168,76,.08);border-left:2px solid var(--gold)}
 @media print{
   @page{size:A4;margin:18mm 16mm}
@@ -320,7 +325,8 @@ table{overflow-x:auto}
 </header>
 
 <div class="shell">
-  <nav class="sidebar" id="sidebar"></nav>
+  <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-controls="sidebar" aria-expanded="false" onclick="toggleMobileNav()"><span>☰ &nbsp; Módulos <small id="mobileCurrent">Abertura</small></span><span aria-hidden="true">⌄</span></button>
+  <nav class="sidebar" id="sidebar" aria-label="Módulos do curso"></nav>
   <main id="main"></main>
 </div>
 
@@ -1182,9 +1188,18 @@ function renderModule(id){
     });
   }
   mainEl.innerHTML = html;
+  const mobileCurrent = document.getElementById('mobileCurrent');
+  if (mobileCurrent) mobileCurrent.textContent = m.titulo;
   enhancePromptActions(mainEl);
   document.querySelectorAll('.trail-item').forEach(b=>b.classList.toggle('active', b.dataset.id===id));
-  window.scrollTo({top:0,behavior:'smooth'});
+  if (!window.matchMedia('(max-width:860px)').matches) window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleMobileNav(){
+  const nav=document.getElementById('sidebar');
+  const btn=document.getElementById('mobileNavToggle');
+  const open=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',String(open));
 }
 
 function selectModule(id){
@@ -1192,6 +1207,11 @@ function selectModule(id){
     history.pushState(null, '', '#'+id);
   }
   renderModule(id);
+  if (window.matchMedia('(max-width:860px)').matches) {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('mobileNavToggle').setAttribute('aria-expanded','false');
+    requestAnimationFrame(()=>mainEl.scrollIntoView({behavior:'smooth',block:'start'}));
+  }
 }
 
 /* ============================================================
@@ -1263,7 +1283,8 @@ document.addEventListener('keydown', (e)=>{
 
 buildSidebar();
 if(!roteadorPorHash()){
-  selectModule(PROGRAMA[0].modulos[0].id);
+  history.replaceState(null, '', '#'+PROGRAMA[0].modulos[0].id);
+  renderModule(PROGRAMA[0].modulos[0].id);
 }
 </script>
 <script>

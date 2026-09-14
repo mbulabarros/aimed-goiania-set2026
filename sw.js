@@ -1,4 +1,4 @@
-const CACHE = 'aimed-goiania-2026-v2';
+const CACHE = 'aimed-goiania-2026-v3';
 const LOCAL = [
   './', './index.html', './AIMED_Goiania_19-20_09_2026.html',
   './manifest.json', './og-image.png',
