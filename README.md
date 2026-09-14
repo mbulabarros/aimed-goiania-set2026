@@ -6,4 +6,4 @@ Site do curso: https://mbulabarros.github.io/aimed-goiania-set2026/ . Abra esse 
 
 ## Horários
 
-19 e 20 de setembro: 8h–12h e 13h30–17h30, com cafés 10h–10h15 e 15h30–15h45. São 16 horas presenciais de programação, incluindo 1 hora de intervalos para café.
+19 e 20 de setembro: 8h–12h e 13h30–17h30. Em cada dia, os cafés são das 10h às 10h15 e das 15h30 às 15h45.
