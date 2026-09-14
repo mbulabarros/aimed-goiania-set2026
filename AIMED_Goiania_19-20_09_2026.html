@@ -233,7 +233,9 @@ abbr.gloss:hover::after{opacity:1;visibility:visible;transform:translateX(-50%) 
 .sobre-close:hover{background:rgba(201,168,76,.15);border-color:var(--gold)}
 .sobre-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 .sobre-title{font-family:'Playfair Display',serif;font-size:1.5em;color:var(--white);margin-bottom:4px}
-.sobre-sub{color:var(--gold-light);font-size:.88em;margin-bottom:22px}
+.sobre-sub{color:var(--gold-light);font-size:.88em;margin-bottom:12px}
+.sobre-site-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-bottom:22px;padding:9px 14px;border:1px solid var(--gold);border-radius:99px;color:var(--gold) !important;font-family:'DM Mono',monospace;font-size:.76rem;letter-spacing:.04em;text-decoration:none !important;cursor:pointer;position:relative;z-index:1;transition:.2s}
+.sobre-site-link:hover,.sobre-site-link:focus-visible{background:var(--gold);color:var(--navy) !important;outline:2px solid var(--gold-light);outline-offset:3px}
 .sobre-card p{margin-bottom:12px}
 .sobre-cred{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .sobre-cred span{border:1px solid var(--border);border-radius:99px;padding:6px 14px;font-family:'DM Mono',monospace;font-size:.72rem;color:var(--gray-300)}
@@ -353,7 +355,8 @@ table{overflow-x:auto}
     <button class="sobre-close" onclick="fecharSobre()" aria-label="Fechar">×</button>
     <div class="sobre-eyebrow">Sobre o instrutor</div>
     <div class="sobre-title" id="sobreTitle">Dr. Mbula Luzingu Barros</div>
-    <div class="sobre-sub">Pediatra na Maternidade Darcy Vargas · fundador da <a href="https://inovamed.pro/" target="_blank" rel="noopener noreferrer">INOVAMED</a></div>
+    <div class="sobre-sub">Pediatra na Maternidade Darcy Vargas · fundador da INOVAMED</div>
+    <a class="sobre-site-link" href="https://inovamed.pro/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site da INOVAMED em uma nova aba">Conheça a INOVAMED <span aria-hidden="true">↗</span></a>
     <p>Há mais de dois anos, desenvolvo cursos de IA aplicada à medicina para médicos e equipes multidisciplinares. Já foram <strong>mais de 12 edições realizadas</strong>, sempre partindo de situações concretas de estudo, assistência e gestão.</p>
     <p>A INOVAMED nasceu para levar a IA <strong>da teoria à beira do leito</strong>: formação prática, ferramentas úteis e método para decidir onde a tecnologia realmente ajuda. O AIMED é a expressão dessa proposta em sala — cada aluno constrói, testa e leva uma ferramenta para o seu contexto.</p>
     <p>Minha própria trajetória com IA começou antes do AIMED. Em 2026, passei em <strong>1º lugar no concurso público para pediatra da SES/SC</strong> usando sistematicamente IA como ferramenta de estudo — método documentado no livro <em>100 Pontos</em>. A conclusão permanece: IA não é atalho; é <strong>extensão do raciocínio clínico</strong> quando construída com método, responsabilidade e autoria humana.</p>
