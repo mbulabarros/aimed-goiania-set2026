@@ -8,6 +8,8 @@ Site do curso: https://mbulabarros.github.io/aimed-goiania-set2026/ . Abra esse 
 
 19 e 20 de setembro: 8h–12h e 13h30–17h30. Em cada dia, os cafés são das 10h às 10h15 e das 15h30 às 15h45.
 
-## Vídeos de abertura
+## Vídeos do curso
 
-Os vídeos curtos serão gravados na vertical e publicados no YouTube por Mbula. Cada módulo do `index.html` contém um campo `avatar:null`. Após publicar e conferir um vídeo, substitua `null` pelo link público entre aspas, por exemplo `avatar:'https://www.youtube.com/shorts/ID_DO_VIDEO'`. O site aceita links `youtube.com/watch`, `youtube.com/shorts` e `youtu.be`; gera o player vertical automaticamente. Mantenha `null` nos módulos ainda sem vídeo: o espaço do player fica oculto. Faça a mesma alteração em `AIMED_Goiania_19-20_09_2026.html`, publique ambos os arquivos e avance a versão do cache em `sw.js`.
+Os 16 vídeos curtos em formato vertical já foram publicados no YouTube e vinculados aos 16 módulos do site, um vídeo por módulo. O player vertical aparece no próprio material do curso.
+
+Ao substituir algum vídeo, atualize o link `avatar` do módulo correspondente nos dois HTMLs (`index.html` e `AIMED_Goiania_19-20_09_2026.html`), confira a reprodução e avance a versão do cache em `sw.js` antes de publicar. Os vídeos e os botões das IAs exigem conexão com a internet.
